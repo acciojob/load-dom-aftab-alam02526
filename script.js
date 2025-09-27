@@ -1,6 +1,10 @@
 //your JS code here. If required.
-const body = document.querySelector('body');
-const newElement = document.createElement('p');
 
-newElement.innerText = "DOM load success";
-body.appendChild(newElement);
+document.addEventListener('DOMContentLoaded', function () {
+  const body = document.body;
+
+  const message = document.createElement('p');
+  message.innerText = "DOM load success";
+  body.appendChild(message);
+});
+
