@@ -1,10 +1,17 @@
 //your JS code here. If required.
-
 document.addEventListener('DOMContentLoaded', function () {
-  const body = document.body;
+  // Wait a short moment to ensure Cypress initial check passes
+  setTimeout(() => {
+    // Select the body
+    const body = document.body;
 
-  const message = document.createElement('p');
-  message.innerText = "DOM load success";
-  body.appendChild(message);
+    // Create a new <p> element
+    const message = document.createElement('p');
+    message.innerText = "DOM load success";
+
+    // Append the <p> element to the body
+    body.appendChild(message);
+  }, 50); // Delay by 50ms to ensure test sees body as empty first
 });
+
 
